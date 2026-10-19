@@ -1,0 +1,26 @@
+name: Plugin or skill idea
+description: Suggest a change to the plugin or one of its skills.
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues here are public, so please leave out ticket text, project names and anything else from your board.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Claude to do?
+      description: Describe the situation and what you'd want to happen.
+    validations:
+      required: true
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which part does it touch?
+      options:
+        - run-agent-work
+        - plan-agent-work
+        - review-agent-work
+        - Install or connection
+        - Something new
