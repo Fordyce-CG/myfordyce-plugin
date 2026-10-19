@@ -1,0 +1,49 @@
+name: Bug report
+description: Something in the plugin or its skills doesn't work as described.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. Issues here are public, so please leave out ticket text, project names, keys and anything else from your board.
+        For sign-in, account or billing questions, email support@fordycecg.com instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Ran /plugin install my-fordyce@fordyce-cg
+        2. Asked Claude to "take the next ticket"
+        3. ...
+  - type: dropdown
+    id: client
+    attributes:
+      label: Where were you using it?
+      options:
+        - Claude Code
+        - Claude (web)
+        - Claude (desktop)
+        - Claude (mobile)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: Shown by /plugin in Claude Code, for example 1.0.0.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed board content, keys and personal details from this report.
+          required: true
